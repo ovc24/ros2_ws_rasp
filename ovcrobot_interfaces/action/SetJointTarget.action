@@ -1,0 +1,8 @@
+# Request
+float32[6] target
+---
+# Result
+bool success
+---
+#Feedback
+float32[6] current
