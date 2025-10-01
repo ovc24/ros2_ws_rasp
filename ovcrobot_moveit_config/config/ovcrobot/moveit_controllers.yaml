@@ -1,0 +1,23 @@
+# This file configures the controller management for MoveIt, specifying which controllers are available,
+# the joints each controller handles, and the type of interface (e.g. FollowJointTrajectory).
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager  # Specifies the controller manager to use.
+ 
+# Define the controllers configured using the ROS 2 Control framework.
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller   # Name of the controller for the robotic arm.
+ 
+  # Configuration for the arm_controller.
+  arm_controller:
+    action_ns: follow_joint_trajectory   # ROS action namespace to which MoveIt sends trajectory commands.
+    type: FollowJointTrajectory          # Type of the controller interface; follows a joint trajectory.
+    default: true                        # This controller is the default for the joints listed below.
+    joints:                              # List of joints that the arm_controller manages.
+      - J1_Joint
+      - J2_Joint
+      - J3_Joint
+      - J4_Joint
+      - J5_Joint
+      - J6_Joint
+ 
+ 

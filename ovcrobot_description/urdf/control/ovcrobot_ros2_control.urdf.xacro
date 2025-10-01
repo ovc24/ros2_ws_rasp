@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!-- <robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <xacro:macro name="ovcrobot_ros2_control"> -->
+<robot name="ovcrobot">
+        <ros2_control name="RobotSystem" type="system">
+            <hardware>
+                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+            </hardware>
+
+            <joint name="J1_Joint">
+                <command_interface name="position">
+                    <param name="min">-0.873</param>
+                    <param name="max">0.873</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="J2_Joint">
+                <command_interface name="position">
+                    <param name="min">-1.047</param>
+                    <param name="max">1.047</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="J3_Joint">
+                <command_interface name="position">
+                    <param name="min">-1.047</param>
+                    <param name="max">1.396</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="J4_Joint">
+                <command_interface name="position">
+                    <param name="min">-1.571</param>
+                    <param name="max">1.571</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="J5_Joint">
+                <command_interface name="position">
+                    <param name="min">-0.436</param>
+                    <param name="max">2.094</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <joint name="J6_Joint">
+                <command_interface name="position">
+                    <param name="min">-2.094</param>
+                    <param name="max">2.094</param>
+                </command_interface>
+                <state_interface name="position"/>
+            </joint>
+
+            <!--joint name="${prefix}gripper_controller">
+                <command_interface name="position">
+                    <param name="min">-0.7</param>
+                    <param name="max">0.15</param>
+                </command_interface>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}gripper_base_to_${prefix}gripper_left2">
+                <param name="mimic">gripper_controller</param>
+                <param name="multiplier">1.0</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}gripper_left3_to_${prefix}gripper_left1">
+                <param name="mimic">gripper_controller</param>
+                <param name="multiplier">-1.0</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}gripper_base_to_${prefix}gripper_right3">
+                <param name="mimic">gripper_controller</param>
+                <param name="multiplier">-1.0</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}gripper_base_to_${prefix}gripper_right2">
+                <param name="mimic">gripper_controller</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}gripper_right3_to_${prefix}gripper_right1">
+                <param name="mimic">gripper_controller</param>
+                <param name="multiplier">1.0</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint-->
+
+        </ros2_control>
+</robot>

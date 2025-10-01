@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot name="ovcrobot">
+
+  <link name="world"/>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00017846 2.208E-05 0.082344"
+        rpy="0 0 0" />
+      <mass value="15.205" />
+      <inertia
+        ixx="0.079686"
+        ixy="8.849E-06"
+        ixz="-9.6184E-05"
+        iyy="0.079533"
+        iyz="1.0139E-05"
+        izz="0.12377" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="L1_Link">
+    <inertial>
+      <origin
+        xyz="-9.3961E-05 0.0038811 0.05251"
+        rpy="0 0 0" />
+      <mass
+        value="3.055" />
+      <inertia
+        ixx="0.0063645"
+        ixy="-3.4502E-09"
+        ixz="-1.1434E-08"
+        iyy="0.0045536"
+        iyz="1.234E-05"
+        izz="0.0079882" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="J1_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.202"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-0.873" upper="0.873" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="L2_Link">
+    <inertial>
+      <origin
+        xyz="0.00075643 0.14431 -0.00043525"
+        rpy="0 0 0" />
+      <mass
+        value="0.955" />
+      <inertia
+        ixx="0.014585"
+        ixy="-4.7039E-08"
+        ixz="2.7251E-07"
+        iyy="0.0032353"
+        iyz="-2.9796E-07"
+        izz="0.012515" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="J2_Joint"
+    type="revolute">
+    <origin xyz="0 0 0.0605" rpy="-1.5708 0 0" />
+    <parent
+      link="L1_Link" />
+    <child
+      link="L2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.047" upper="1.047" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="L3_Link">
+    <inertial>
+      <origin
+        xyz="0.029456 0.010829 0.0045432"
+        rpy="0 0 0" />
+      <mass
+        value="2.367" />
+      <inertia
+        ixx="0.0020045"
+        ixy="-0.00024987"
+        ixz="0.00020181"
+        iyy="0.0020791"
+        iyz="7.4185E-05"
+        izz="0.0021002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="J3_Joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.3 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="L2_Link" />
+    <child
+      link="L3_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.047" upper="1.396" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="L4_Link">
+    <inertial>
+      <origin
+        xyz="-6.442E-07 0.0007577 0.11714"
+        rpy="0 0 0" />
+      <mass
+        value="0.35" />
+      <inertia
+        ixx="0.0035689"
+        ixy="2.1826E-09"
+        ixz="-1.0586E-08"
+        iyy="0.0027008"
+        iyz="-4.0499E-05"
+        izz="0.0013409" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4_Joint"
+    type="revolute">
+    <origin
+      xyz="0.06 0.08 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="L3_Link" />
+    <child
+      link="L4_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1.571" upper="1.571" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="L5_Link">
+    <inertial>
+      <origin
+        xyz="0.025467 0.0015826 0.0021322"
+        rpy="0 0 0" />
+      <mass
+        value="1.252" />
+      <inertia
+        ixx="0.00090222"
+        ixy="-1.1593E-05"
+        ixz="6.5086E-05"
+        iyy="0.0011896"
+        iyz="2.2696E-06"
+        izz="0.00091429" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="J5_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.256"
+      rpy="1.5708 0 0" />
+    <parent
+      link="L4_Link" />
+    <child
+      link="L5_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-0.436" upper="2.094" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="L6_Link">
+    <inertial>
+      <origin
+        xyz="-3.018E-05 -4.3069E-05 0.0097033"
+        rpy="0 0 0" />
+      <mass
+        value="0.06" />
+      <inertia
+        ixx="1.8308E-05"
+        ixy="3.7814E-08"
+        ixz="4.4956E-09"
+        iyy="1.8352E-05"
+        iyz="1.8178E-08"
+        izz="3.3197E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find ovcrobot_description)/meshes/ovcrobot/L6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="J6_Joint"
+    type="revolute">
+    <origin
+      xyz="0.06 0.045 -0.0025"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="L5_Link" />
+    <child
+      link="L6_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-2.094" upper="2.094" effort="10" velocity="1.0" acceleration="1.0"/>
+  </joint>
+  <link name="ee_link"/>
+  <joint name="fixed_ee" type="fixed">
+    <origin
+      xyz="0.0 0.00 0.139"
+      rpy="0 0 0" />
+    <parent link="L6_Link"/>
+    <child link="ee_link"/>
+  </joint>
+
+  <ros2_control name="RobotSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+
+    <joint name="J1_Joint">
+      <command_interface name="position">
+        <param name="min">-0.873</param>
+        <param name="max">0.873</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="J2_Joint">
+      <command_interface name="position">
+        <param name="min">-1.047</param>
+        <param name="max">1.047</param>
+      </command_interface>
+        <state_interface name="position"/>
+    </joint>
+
+    <joint name="J3_Joint">
+      <command_interface name="position">
+        <param name="min">-1.047</param>
+        <param name="max">1.396</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="J4_Joint">
+      <command_interface name="position">
+        <param name="min">-1.571</param>
+        <param name="max">1.571</param>
+      </command_interface>
+      <state_interface name="position"/>
+     </joint>
+
+    <joint name="J5_Joint">
+      <command_interface name="position">
+        <param name="min">-0.436</param>
+        <param name="max">2.094</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="J6_Joint">
+      <command_interface name="position">
+        <param name="min">-2.094</param>
+        <param name="max">2.094</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+  <!-- <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so"/>
+  </gazebo> -->
+  <!-- <xacro:include filename="$(find ovcrobot_description)/urdf/control/gazebo_sim_ros2_control.urdf.xacro"/>
+  <xacro:load_gazebo_sim_ros2_control_plugin/> -->
+  
+  <!-- <xacro:include filename="$(find ovcrobot_description)/urdf/control/ovcrobot_ros2_control.urdf.xacro"/>
+  <xacro:ovcrobot_ros2_control/> -->
+  <!-- <ros2_control name="ovcrobot_hw" type="system">
+    <hardware>
+      <plugin>example_controllers/ExampleSystem</plugin>
+    </hardware>
+    <joint name="J1_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="J2_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="J3_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="J4_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="J5_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="J6_Joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control> -->
+</robot>
